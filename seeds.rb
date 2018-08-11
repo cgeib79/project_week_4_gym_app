@@ -7,7 +7,7 @@ rocky = Member.new ({
   'second_name' => 'Balboa',
   'membership_tier' => 'Premium'
   })
-  rock.save()
+  rocky.save()
 
   lincoln = Member.new ({
     'first_name' => 'Lincoln',
@@ -44,6 +44,6 @@ rocky = Member.new ({
             })
             lara.save()
 
-            
+
             binding.pry
             NIL

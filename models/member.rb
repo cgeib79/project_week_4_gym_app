@@ -11,22 +11,22 @@ class Member
   end
 
   def save()
-    sql = 'INSERT INTO members (first_name, second_name, membership_tier) VALUES ($1, $2, $3) RETURNING id']
+    sql = 'INSERT INTO members (first_name, second_name, membership_tier) VALUES ($1, $2, $3) RETURNING id'
     values = [@first_name, @second_name, @membership_tier]
     @id =SqlRunner.run(sql, values)
   end
 
-  def self.find()
+  def self.all()
     sql = 'SELECT * FROM members'
     members = SqlRunner.run(sql)
-    members.map{|map| Student.new(student)}
+    members.map{|map| Member.new(member)}
   end
 
-  def
-    sql = 'SELECT * FROM students WHERE id =$1'
+  def self.find(id)
+    sql = 'SELECT * FROM members WHERE id =$1'
     values = [id]
-    students = SqlRunner.run(sql, values)
-    result = Student.new(student.first)
+    members = SqlRunner.run(sql, values)
+    result = Member.new(members.first)
     return result
   end
 
