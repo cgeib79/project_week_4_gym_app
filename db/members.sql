@@ -5,4 +5,4 @@ CREATE TABLE members(
   first_name VARCHAR(255),
   second_name VARCHAR(255),
   membership_tier VARCHAR(255),
-)
+);
