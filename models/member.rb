@@ -1,6 +1,9 @@
 require_relative('../db/sql_runner')
 
 class Member
+
+  attr_reader :first_name, :second_name, :membership_tier
+
   attr_accessor :first_name, :second_name, :membership_tier
 
   def initialize(options)
@@ -19,7 +22,7 @@ class Member
   def self.all()
     sql = 'SELECT * FROM members'
     members = SqlRunner.run(sql)
-    members.map{|map| Member.new(member)}
+    members.map {|member| Member.new(member)}
   end
 
   def self.find(id)
