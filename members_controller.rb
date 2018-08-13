@@ -6,16 +6,17 @@ require_relative('./models/member')
 require_relative('./models/fitness_class')
 also_reload('.models/*')
 
-get '/members' do #index , works but displays names strangely
+get '/members' do #index
   @members = Member.all()
   erb( :index )
 end
 
-get '/members/new' do #works
+get '/members/new' do #new
   erb(:new)
 end
 
 get '/members/:id' do #shows error re integer id
+# return 'hello'
   @member = Member.find( params[:id] )
   erb( :show )
 end
