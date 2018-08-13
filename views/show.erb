@@ -1,4 +1,9 @@
 <p>First Name: <%= @member.first_name %></p>
 <p>Second Name: <%= @member.second_name %></p>
 <p>Membership Tier: <%= @member.membership_tier %></p>
-<p><a href="/members/<%= @member.id %>/edit">Edit Members</a></p>
+
+<p><a href="/members/<%= @member.id %>/edit">Edit Member</a></p>
+
+<form method="post" action="/members/<%= @member.id %>/delete" >
+  <input type="submit" value="Delete Member">
+</form>

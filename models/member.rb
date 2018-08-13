@@ -34,15 +34,46 @@ def full_name()
 end
 
   def save()
-    sql = 'INSERT INTO members (first_name, second_name, membership_tier) VALUES ($1, $2, $3) RETURNING id'
+    sql = 'INSERT INTO members
+    (
+      first_name, second_name, membership_tier
+    )
+       VALUES (
+         $1, $2, $3
+         )
+         RETURNING *'
     values = [@first_name, @second_name, @membership_tier]
-    @id =SqlRunner.run(sql, values)
+    member_data = SqlRunner.run(sql, values)
+    @id = member_data.first()['id'].to_i
+  end
+
+def update()
+  sql = 'UPDATE members
+  SET
+(
+  first_name,
+  last_name,
+  membership_tier
+) =
+(
+  $1, $2, $3
+)
+WHERE id = $4'
+values =[@first_name, @last_name, @membership_tier, @id]
+SqlRunner.run( sql, values)
+end
+
+  def delete()
+    sql = 'DELETE FROM members WHERE id = $1'
+    values = [@id]
+    SqlRunner.run(sql, values)
   end
 
   def self.all()
     sql = 'SELECT * FROM members'
     members = SqlRunner.run(sql)
     members.map {|member| Member.new(member)}
+    return result
   end
 
   def self.find(id)
@@ -52,5 +83,7 @@ end
     result = Member.new(members.first)
     return result
   end
+
+
 
 end

@@ -15,8 +15,7 @@ get '/members/new' do #new
   erb(:new)
 end
 
-get '/members/:id' do #shows error re integer id
-# return 'hello'
+get '/members/:id' do #show
   @member = Member.find( params[:id] )
   erb( :show )
 end
