@@ -1,0 +1,13 @@
+<form method="post" action="/members/<%= @member.id" >
+  <label for="first-name">First Name:</label>
+  <input type="text" name="first_name" id="first-name" value="<%= @member.first_name %>"/>
+
+<label for="second-name">Second Name:</label>
+<input type="text" name="second_name" id="second-name" value="second-name" <%= @member.second_name %>" />
+
+<label for="membership-tier">Second Name:</label>
+<input type="text" name="membership_tier" id="membership-tier" value="second-name" <%= @member.membership_tier %>" />
+
+<input type="submit" value="Edit Member">
+
+</form>

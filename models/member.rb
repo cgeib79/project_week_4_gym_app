@@ -13,6 +13,26 @@ class Member
     @membership_tier = options['membership_tier']
   end
 
+  def id()
+    return "#{@id}"
+  end
+
+def first_name()
+  return "#{@first_name}"
+end
+
+def second_name()
+  return "#{@second_name}"
+end
+
+def membership_tier()
+  return "#{@membership_tier}"
+end
+
+def full_name()
+  return "#{@first_name} #{@second_name}"
+end
+
   def save()
     sql = 'INSERT INTO members (first_name, second_name, membership_tier) VALUES ($1, $2, $3) RETURNING id'
     values = [@first_name, @second_name, @membership_tier]
