@@ -44,5 +44,36 @@ end
 
 get '/fitness_classes' do #index_fitness_classes
   @fitness_classes = Fitness_Class.all()
-  erb(:fitness_classes)
+  erb(:index_fitness_classes)
+end
+
+get '/fitness_classes/new' do #new_fitness_classes
+  erb(:new_fitness_classes)
+end
+
+get '/fitness_classes/:id' do #show_fitness_classes
+  @fitness_class = Fitness_Class.find( params[:id] )
+  erb(:show_fitness_classes)
+end
+
+get '/fitness_classes' do #create_fitness_classes
+  @fitness_class = Fitness_Class.new( params )
+  @fitness_class.save()
+  erb( :create_fitness_classes)
+end
+
+get '/fitness_classes/:id/edit' do #edit_fitness_classes
+  @fitness_class = Fitness_Class.find( params[:id])
+  erb( :edit_fitness_classes )
+end
+
+post '/fitness_classes/:id' do #update_fitness_classes
+  Fitness_Class.new( params ).update
+  redirect to '/fitness_classes'
+end
+
+post '/fitness_classes/:id/delete' do #delete_fitness_classes
+  fitness_class = Fitness_Class.find( params[:id] )
+  fitness_class.delete()
+  redirect to '/fitness_classes'
 end

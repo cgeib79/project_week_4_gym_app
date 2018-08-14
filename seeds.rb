@@ -53,42 +53,42 @@ rocky = Member.new ({
               tyler.save()
 
             bruiser = Fitness_Class.new({
-              'class_name' => 'Taskforce Bruiser',
-              'class_time' => '07:00',
+              'fitness_class_name' => 'Taskforce Bruiser',
+              'fitness_class_time' => '07:00',
               'peak_category' => 'off-peak',
-              'max_class_size' => 5
+              'fitness_class_max_size' => 5
               })
               bruiser.save()
 
             red_dawn = Fitness_Class.new({
-              'class_name' => 'Red Dawn',
-              'class_time' => '05:00',
+              'fitness_class_name' => 'Red Dawn',
+              'fitness_class_time' => '05:00',
               'peak_category' => 'off-peak',
-              'max_class_size' => 6
+              'fitness_class_max_size' => 6
               })
               red_dawn.save()
 
-              close = Fitness_Class.new({
-                'class_name' => 'They are really close',
-                'class_time' => '12:00',
+              fight = Fitness_Class.new({
+                'fitness_class_name' => 'Fight Club',
+                'fitness_class_time' => '18:00',
                 'peak_category' => 'peak',
-                'max_class_size' => 7
+                'fitness_class_max_size' => 8
                 })
-                close.save()
+                fight.save()
 
-                fight = Fitness_Class.new({
-                  'class_name' => 'Fight Club',
-                  'class_time' => '18:00',
+                full_metal = Fitness_Class.new({
+                  'fitness_class_name' => 'Sergeant Hartman memorial drill',
+                  'fitness_class_time' => '12:30',
                   'peak_category' => 'peak',
-                  'max_class_size' => 8
+                  'fitness_class_max_size' => 9
                   })
-                  fight.save()
+                  full_metal.save()
 
                   black_eye = Fitness_Class.new({
-                    'class_name' => 'Black Eye Friday',
-                    'class_time' => '19:00',
+                    'fitness_class_name' => 'Black Eye Friday',
+                    'fitness_class_time' => '19:00',
                     'peak_category' => 'peak',
-                    'max_class_size' => 8
+                    'fitness_class_max_size' => 8
                     })
                     black_eye.save()
 

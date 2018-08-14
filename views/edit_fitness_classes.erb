@@ -1,0 +1,19 @@
+<form method="post" action="/fitness_classes/<%= @fitness_class.id %>" >
+  <label for="fitness-class-name">Fitness Class Name</label>
+  <input type="text" name="fitness_class_name" id="fitness-class-name" value="<%=@fitness_class.fitness_class_name %>"/>
+
+<label for="fitness-class-time">Fitness Class Time</label>
+<input type="time" name="fitness_class_time" id="fitness-class-time" value="<= @fitness_class.fitness_class_time %>"/>
+
+<label for="peak-category">Peak Category:</label>
+<select name="peak_category" id="peak-category">
+  <option value="Peak" <%= "selected" if @fitness_class.peak_category == "Peak" %> >Peak</option>
+  <option value="Peak" <%= "selected" if @fitness_class.peak_category == "Off Peak" %> >Off Peak</option>
+</select>
+
+<label for="fitness-class-max-size">Class Max Size:</label>
+<input type="number" name="fitness_class_max_size" id="fitness-class-max-size" value="<%= @fitness_class.fitness_class_max_size() %>" />
+
+<input type="submit" value="Save Edits">
+
+</form>

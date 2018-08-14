@@ -10,8 +10,8 @@ CREATE TABLE members(
 
 CREATE TABLE fitness_classes(
   id SERIAL PRIMARY KEY,
-  class_name VARCHAR(255),
-  class_time TIME,
+  fitness_class_name VARCHAR(255),
+  fitness_class_time TIME,
   peak_category VARCHAR(255),
-  max_class_size INT
+  fitness_class_max_size INT
 );
