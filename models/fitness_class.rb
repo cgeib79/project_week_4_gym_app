@@ -41,7 +41,8 @@ end
   def save()
     sql = 'INSERT INTO fitness_classes (fitness_class_name, fitness_class_time, peak_category, fitness_class_max_size) VALUES ($1, $2, $3, $4) RETURNING id'
     values = [@fitness_class_name, @fitness_class_time, @peak_category, @fitness_class_max_size]
-    @id = SqlRunner.run(sql, values)
+    fitness_class_data = SqlRunner.run(sql, values)
+    @id = fitness_class_data.first()['id'].to_i
   end
 
 def update()

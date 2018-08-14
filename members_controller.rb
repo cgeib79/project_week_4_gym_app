@@ -56,7 +56,7 @@ get '/fitness_classes/:id' do #show_fitness_classes
   erb(:show_fitness_classes)
 end
 
-get '/fitness_classes' do #create_fitness_classes
+post '/fitness_classes' do #create_fitness_classes
   @fitness_class = Fitness_Class.new( params )
   @fitness_class.save()
   erb( :create_fitness_classes)
