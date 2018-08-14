@@ -2,9 +2,9 @@ require_relative('../db/sql_runner')
 
 class Member
 
-  attr_reader :first_name, :second_name, :membership_tier
+  attr_reader :first_name, :second_name, :membership_tier, :id
 
-  attr_accessor :first_name, :second_name, :membership_tier
+  attr_accessor :first_name, :second_name, :membership_tier, :id
 
   def initialize(options)
     @id = options['id'].to_i
@@ -52,14 +52,14 @@ def update()
   SET
 (
   first_name,
-  last_name,
+  second_name,
   membership_tier
 ) =
 (
   $1, $2, $3
 )
 WHERE id = $4'
-values =[@first_name, @last_name, @membership_tier, @id]
+values =[@first_name, @second_name, @membership_tier, @id]
 SqlRunner.run( sql, values)
 end
 
@@ -73,7 +73,6 @@ end
     sql = 'SELECT * FROM members'
     members = SqlRunner.run(sql)
     members.map {|member| Member.new(member)}
-    return result
   end
 
   def self.find(id)
