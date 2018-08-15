@@ -4,7 +4,7 @@ require( 'pry-byebug' )
 
 require_relative('./models/member')
 require_relative('./models/fitness_class')
-require_relative('./models/member_classes')
+require_relative('./models/member_class')
 also_reload('.models/*')
 
 get '/members' do #index

@@ -13,7 +13,6 @@ def initialize( options )
   @member_id = options['member_id'].to_i
   @fitness_class_id = options['fitness_class_id'].to_i
   @fitness_class_max_size = options['fitness_class_max_class_size'].to_i
-  @list_members_per_class = options['all_members_in_fitness_class']
 end
 
 def save()
@@ -26,10 +25,10 @@ def save()
 )
 VALUES
 (
-  $1, $2, $3, $4
+  $1, $2, $3
 )
 '
-values = [@member_id, @fitness_class_id, @fitness_class_max_size, @list_members_per_class]
+values = [@member_id, @fitness_class_id, @fitness_class_max_size]
 member_class = SqlRunner.run( sql, values ).first
 @id = visit['id'].to_i
 end
