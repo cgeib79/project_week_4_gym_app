@@ -1,5 +1,38 @@
 h1{
   font-family: 'Lobster', cursive;
 }
-body {background-color: #FFEFD5
-;}
+body {
+  background-color: #AFEEEE;
+  font-family: sans-serif;
+}
+
+a {
+    color: blue;
+}
+
+a:hover{
+  color: #DA70D6;
+}
+
+input[type=submit] {
+    background:#778899;
+    font-weight: bold;
+    color: white;
+}
+
+input:hover[type="submit"] {
+background: #DC143C;
+}
+
+select:hover {
+  background: yellow;
+}
+
+#button {
+    width: 18em;
+    height: 3em;
+    text-align: center;
+    border: 2px solid green;
+    background: #ffe;
+    border-radius: 5px;
+}

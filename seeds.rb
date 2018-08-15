@@ -100,6 +100,12 @@ Member_Class.new({
   })
 member_class1.save()
 
+member_class2 =
+Member_Class.new({
+  'member_id ' => 2,
+  'fitness_class_id' => 1
+  })
+member_class2.save()
 
             binding.pry
             NIL

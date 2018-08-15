@@ -14,6 +14,7 @@ def initialize( options )
   @fitness_class_id = options['fitness_class_id'].to_i
 end
 
+
 def save()
   sql = 'INSERT INTO member_classes
 (
