@@ -4,6 +4,7 @@ require( 'pry-byebug' )
 
 require_relative('./models/member')
 require_relative('./models/fitness_class')
+require_relative('./models/member_classes')
 also_reload('.models/*')
 
 get '/members' do #index
@@ -76,4 +77,9 @@ post '/fitness_classes/:id/delete' do #delete_fitness_classes
   fitness_class = Fitness_Class.find( params[:id] )
   fitness_class.delete()
   redirect to '/fitness_classes'
+end
+
+get '/member_classes' do #index_member_classes
+  @member_classes = Member_Class.all()
+  erb( :index_member_classes)
 end
