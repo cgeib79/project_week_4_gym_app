@@ -30,9 +30,10 @@ select:hover {
 
 #button {
     width: 18em;
-    height: 3em;
+    height: 2em;
     text-align: center;
+    padding: 10px 0;
     border: 2px solid green;
-    background: #ffe;
+    background: #00CED1;
     border-radius: 5px;
 }

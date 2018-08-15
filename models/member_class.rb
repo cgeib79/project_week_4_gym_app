@@ -24,7 +24,7 @@ def save()
 VALUES
 (
   $1, $2
-)
+) RETURNING id
 '
 values = [@member_id, @fitness_class_id]
 member_class_data = SqlRunner.run( sql, values )
