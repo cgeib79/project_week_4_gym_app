@@ -26,8 +26,8 @@ VALUES
 )
 '
 values = [@member_id, @fitness_class_id]
-member_class = SqlRunner.run( sql, values ).first
-@id = visit['id'].to_i
+member_class_data = SqlRunner.run( sql, values )
+@id = member_class_data.first()['id'].to_i
 end
 
 def member()

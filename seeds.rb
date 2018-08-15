@@ -2,7 +2,7 @@ require 'pry-byebug'
 
 require_relative 'models/member'
 require_relative 'models/fitness_class'
-# require_relative 'models/member_class'
+require_relative 'models/member_class'
 
 rocky = Member.new ({
   'first_name' => 'Rocky',
@@ -93,6 +93,12 @@ rocky = Member.new ({
                     })
                     black_eye.save()
 
+member_class1 =
+Member_Class.new({
+  'member_id' => 1,
+  'fitness_class_id' => 1
+  })
+member_class1.save()
 
 
             binding.pry
