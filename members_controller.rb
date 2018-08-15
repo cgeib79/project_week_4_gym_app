@@ -83,3 +83,7 @@ get '/member_classes' do #index_member_classes
   @member_classes = Member_Class.all()
   erb( :index_member_classes)
 end
+
+get '/member_classes/new' do #new_member_classes
+  erb(:new_member_classes)
+end
