@@ -12,7 +12,6 @@ def initialize( options )
   @id = options['id'].to_i if options['id']
   @member_id = options['member_id'].to_i
   @fitness_class_id = options['fitness_class_id'].to_i
-  @fitness_class_max_size = options['fitness_class_max_class_size'].to_i
 end
 
 def save()
