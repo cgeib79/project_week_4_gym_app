@@ -1,10 +1,10 @@
-<h1>Member Classes</h1>
+<h1>Enrolled in classes</h1>
 <div class="grid">
   <% @member_classes.each do |member_class| %>
-  <p> <%= member.member_id
+  <p> <%= member_class.member_id
   %></p>
-  <p><%= fitness_class.fitness_class_id%></p>
-  <p><a href="/member_classes/<%= member_class.id%>"></a>show_member_classes</p>
+  <p><%= member_class.fitness_class_id%></p>
+  <p><a href="/member_classes/<%= member_class.id %>"></a>Show enrollment per class</p>
   <hr/>
   <% end %>
 </div>
