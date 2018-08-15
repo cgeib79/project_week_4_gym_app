@@ -4,9 +4,9 @@ require_relative('fitness_class')
 
 class Member_Class
 
-attr_reader :member_id, :fitness_class_id, :fitness_class_max_size, :all_members_in_fitness_class
+attr_reader :member_id, :fitness_class_id, :id
 
-attr_accessor :member_id, :fitness_class_id, :fitness_class_max_size, :all_members_in_fitness_class
+attr_accessor :member_id, :fitness_class_id, :id
 
 def initialize( options )
   @id = options['id'].to_i if options['id']
@@ -19,16 +19,14 @@ def save()
   sql = 'INSERT INTO member_classes
 (
   member_id,
-  fitness_class_id,
-  fitness_class_max_size,
-  all_members_in_fitness_class
+  fitness_class_id
 )
 VALUES
 (
-  $1, $2, $3
+  $1, $2
 )
 '
-values = [@member_id, @fitness_class_id, @fitness_class_max_size]
+values = [@member_id, @fitness_class_id]
 member_class = SqlRunner.run( sql, values ).first
 @id = visit['id'].to_i
 end
