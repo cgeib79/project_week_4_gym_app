@@ -1,11 +1,12 @@
 <h1>Fitness Classes</h1>
 <div id="button"><a href="/fitness_classes/new">Click here to add new class</a></div>
 </div>
+<hr/ >
 <div class="grid">
   <% @fitness_classes.each do |fitness_class| %>
-  <p> <%= fitness_class.fitness_class_name %> <%= fitness_class.fitness_class_time %></p>
+  <p>Class name: <%= fitness_class.fitness_class_name %></p> <p>Class Time: <%= fitness_class.fitness_class_time %></p>
   <p> <%= fitness_class.peak_category %> </p>
-  <p> <%= fitness_class.fitness_class_max_size %> </p>
+  <p>Max Size Class: <%= fitness_class.fitness_class_max_size %> </p>
   <p><a href="/fitness_classes/<%= fitness_class.id %>">show_fitness_classes</a></p>
   <hr />
   <% end %>

@@ -5,8 +5,8 @@
   <hr/ >
 <div class="grid">
   <% @members.each do |member| %>
-  <p> <%= member.first_name() %> <%= member.second_name() %> </p>
-  <p> <%= member.membership_tier %> </p>
+  <p>Member name: <%= member.first_name() %> <%= member.second_name() %> </p>
+  <p>Membership Tier: <%= member.membership_tier %> </p>
   <p><a href="/members/<%= member.id %>">Show member</a></p>
   <hr />
   <% end %>

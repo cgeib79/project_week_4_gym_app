@@ -87,3 +87,8 @@ end
 get '/member_classes/new' do #new_member_classes
   erb(:new_member_classes)
 end
+
+get '/member_classes/:id' do #show_member_classes
+  @member_class = Member_Class.find(params[:id] )
+  erb(:show_member_classes)
+end

@@ -51,6 +51,14 @@ def self.all()
   return Member_Class.map_items(member_class_data)
 end
 
+# def delf.find(id)
+#   sql ='SELECT * FROM member_classes WHERE id =$1'
+#   values =[id]
+#   member_classes = SqlRunner.run(sql, values)
+#   result = Member_Class.new(member_classes.first)
+#   return result
+# end
+
 def self.delete_all()
   sql = 'DELETE FROM member_classes'
   SqlRunner.run(sql)

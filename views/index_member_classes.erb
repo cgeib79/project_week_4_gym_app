@@ -1,12 +1,13 @@
 <h1>Enrolled in classes</h1>
 <div id="button"><a href="/member_classes/new">Click here to enroll members to class</a></div>
 </div>
+<hr/ >
 <div class="grid">
   <% @member_classes.each do |member_class| %>
-  <p> <%= member_class.member_id
+  <p>Member Id: <%= member_class.member_id
   %></p>
-  <p><%= member_class.fitness_class_id%></p>
-  <p><a href="/member_classes/<%= member_class.id %>"></a>Show enrollment per class</p>
+  <p>Class Id: <%= member_class.fitness_class_id%></p>
+  <p><a href="/member_classes/<%= member_class.id %>">Show enrollment per class</a></p>
   <hr/>
   <% end %>
 </div>
