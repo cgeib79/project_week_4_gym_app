@@ -3,7 +3,10 @@ h1{
 }
 body {
   background-color: #AFEEEE;
+  background-image: url('/boxing.jpg');
+  background-size: 100% 100%;
   font-family: 'Black Ops One';
+  color: white;
 }
 
 a {
