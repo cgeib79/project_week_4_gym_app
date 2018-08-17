@@ -3,14 +3,14 @@ h1{
 }
 body {
   background-color: #AFEEEE;
-  background-image: url('/boxing.jpg');
+  background-image: url('/iron_lodge.jpg');
   background-size: 100% 100%;
   font-family: 'Black Ops One';
   color: white;
 }
 
 a {
-    color: blue;
+    color: #7CFC00;
 }
 
 a:hover{
@@ -37,6 +37,6 @@ select:hover {
     text-align: center;
     padding: 10px 0;
     border: 2px solid green;
-    background: #00CED1;
+    background: orange;
     border-radius: 5px;
 }
