@@ -19,6 +19,14 @@ class Member_Class
     return "#{@id}"
   end
 
+  def member_id()
+    return "#{@member_id}"
+  end
+
+  def fitness_class_id()
+    return "#{@fitness_class_id}"
+  end
+
   def member()
     sql = 'SELECT * FROM members WHERE id =$1'
     values = [@member_id]
