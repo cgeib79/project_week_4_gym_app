@@ -104,3 +104,9 @@ get '/member_classes/:id/edit' do #edit_member_classes
   @member_class = Member_Class.find( params[:id] )
   erb( :edit_member_classes)
 end
+
+post '/member_classes/:id' do
+  #update_ member_classes
+  Member_Class.new( params ).update
+  redirect to '/member_classes'
+end
