@@ -1,7 +1,8 @@
-<h1>Fitness Classes</h1>
-<div id="button"><a href="/fitness_classes/new">Click here to add new class</a></div>
-</div>
+<div class="show_h1">
+<h1 style="font-size:5vw;">Fitness Classes</h1>
+<a href="/fitness_classes/new" class="button">Click here to add new class</a>
 <hr/ >
+</div>
 <div class="grid">
   <% @fitness_classes.each do |fitness_class| %>
   <p>Class name: <%= fitness_class.fitness_class_name %></p> <p>Class Time: <%= fitness_class.fitness_class_time %></p>
@@ -11,3 +12,4 @@
   <hr />
   <% end %>
 </div>
+<a href="/fitness_classes/new" class="button">Click here to add new class</a>

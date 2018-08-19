@@ -93,12 +93,12 @@ get '/member_classes/:id' do #show_member_classes
   erb(:show_member_classes)
 end
 
-
-
-
-
-
-
+post '/member_classes' do
+  #create_new_entries_member_classes
+  @member_class = Member_Class.new( params)
+  @member_class.save()
+  erb( :create_member_classes)
+end
 
 get '/member_classes/:id/edit' do #edit_member_classes
   @member_class = Member_Class.find( params[:id] )
@@ -108,5 +108,12 @@ end
 post '/member_classes/:id' do
   #update_ member_classes
   Member_Class.new( params ).update
+  redirect to '/member_classes'
+end
+
+post '/member_classes/:id/delete' do
+  #delete_member_classes
+  member_class = Member_Class.find( params[:id])
+  member_class.delete()
   redirect to '/member_classes'
 end

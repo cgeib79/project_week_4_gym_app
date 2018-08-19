@@ -1,10 +1,11 @@
+<div class="show">
 <p>Fitness Class Name: <%= @fitness_class.fitness_class_name %></p>
 
 <p>Fitness Class Time: <%= @fitness_class.fitness_class_time %></p>
 
 <p>Peak Category:<%=@fitness_class.peak_category%></p>
 <p>Fitness Class Max Size:<%=@fitness_class.fitness_class_max_size %></p>
-
+</div>
 <p><a href="/fitness_classes/<%= @fitness_class.id %>/edit">Edit Class</a></p>
 
 <form method="post" action="/fitness_classes/<%= @fitness_class.id%>/delete">

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <title>Gym Members</title>
     <title>Document</title>
@@ -8,13 +9,11 @@
     <link href="https://fonts.googleapis.com/css?family=Black+Ops+One" rel="stylesheet" >
   </head>
   <body>
-<nav>
-  <ul>
-      <p><a href="/members"> <strong>Members</strong></a></p>
-      <p><a href="/fitness_classes"> <strong>Fitness Classes</strong></a></p>
-      <p><a href="/member_classes"><strong>Members in Classes</strong></a></p>
-  </ul>
-</nav>
+    <ul>
+          <li><a  href="/members"><strong>Members</strong></a></li>
+          <li><a  href="/fitness_classes"><strong>Fitness Classes</strong></a></li>
+          <li><a  href="/member_classes"><strong>Members in Classes</strong></a></li>
+    </ul>
 <%= yield %>
   </body>
 </html>

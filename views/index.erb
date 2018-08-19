@@ -1,15 +1,14 @@
-<body>
-<h1>Member List gym_app</h1>
-<div>
-<div id="button"><a href="/members/new">Click here to add new member</a></div>
+<div class="show_h1">
+<h1 style="font-size:5vw;">Member List gym_app</h1>
+<a href="/members/new" class="button">Click here to add new member</a>
+<hr/>
 </div>
-  <hr/ >
-<div class="grid">
+<div>
   <% @members.each do |member| %>
   <p>Member name: <%= member.first_name() %> <%= member.second_name() %> </p>
   <p>Membership Tier: <%= member.membership_tier %> </p>
   <p><a href="/members/<%= member.id %>">Show member</a></p>
-  <hr />
+  <hr/>
   <% end %>
 </div>
-</body>
+<a href="/members/new" class="button">Click here to add new member</a>

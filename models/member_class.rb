@@ -69,7 +69,7 @@ class Member_Class
         $1, $2
       )
       WHERE id = $3'
-      values =[@member_id, @fitness_class_id]
+      values =[@member_id, @fitness_class_id, @id]
       SqlRunner.run( sql, values)
     end
 

@@ -1,12 +1,15 @@
 h1{
   font-family: 'Black Ops One', cursive;
+  padding-top: 70px;
 }
 body {
-  background-color: #AFEEEE;
   background-image: url('/iron_lodge.jpg');
   background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   font-family: 'Black Ops One';
   color: white;
+  margin-left: 20px;
 }
 
 a {
@@ -31,12 +34,54 @@ select:hover {
   background: yellow;
 }
 
-#button {
-    width: 18em;
-    height: 2em;
-    text-align: center;
-    padding: 10px 0;
-    border: 2px solid green;
-    background: orange;
-    border-radius: 5px;
+.button {
+  background-color: #7CFC00;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+ul{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a{
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active){
+  background-color: #111;
+}
+
+li a.active {
+  background-color: #7CFC00;
+}
+
+.show {
+  padding-top: 100px;
+}
+
+.show_h1 {
+  padding-top: 5px;
 }

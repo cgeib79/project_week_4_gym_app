@@ -1,7 +1,8 @@
-<h1>Enrolled in classes</h1>
-<div id="button"><a href="/member_classes/new">Click here to enroll members to class</a></div>
-</div>
+<div class="show_h1">
+<h1 style="font-size:5vw;">Enrolled in classes</h1>
+<a href="/member_classes/new" class="button">Click here to enroll members to class</a>
 <hr/ >
+</div>
 <div class="grid">
   <% @member_classes.each do |member_class| %>
   <p>Member Id: <%= member_class.member_id
@@ -11,3 +12,4 @@
   <hr/>
   <% end %>
 </div>
+<a href="/member_classes/new" class="button">Click here to enroll members to class</a>

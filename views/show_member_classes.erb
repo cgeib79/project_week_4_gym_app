@@ -1,5 +1,10 @@
+<div class="show">
 <p>Member Id: <%= @member_class.member_id %></p>
 
 <p>Fitness Classes Id: <%= @member_class.fitness_class_id %></p>
-
+</div>
 <p><a href="/member_classes/<%= @member_class.id%>/edit">Edit Class Enrollment</a></p>
+
+<form method="post" action="/member_classes/<%= @member_class.id%>/delete">
+  <input type="submit" value="Delete Customer from Class">
+</form>
