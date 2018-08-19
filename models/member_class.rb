@@ -41,6 +41,11 @@ class Member_Class
     return Fitness_Class.new(fitness_class)
   end
 
+  def full_member_class()
+    return "#{@member_id}
+    #{@fitness_class_id}"
+  end
+
   def save()
     sql = 'INSERT INTO member_classes
     (
@@ -71,6 +76,12 @@ class Member_Class
       WHERE id = $3'
       values =[@member_id, @fitness_class_id, @id]
       SqlRunner.run( sql, values)
+    end
+
+    def delete()
+      sql = 'DELETE FROM member_classes WHERE id=$1'
+      values = [@id]
+      SqlRunner.run(sql, values)
     end
 
     def self.all()
