@@ -5,7 +5,7 @@
 <input id="fitness-class-name" type="text" name="fitness_class_name" />
 
 <label for="fitness-class-time">Fitness Class Time</label>
-<input id="fitness-class-time" type="time" name="fitness_class_time"/>
+<input id="fitness-class-time" type="time" required name="fitness_class_time"/>
 
 <label for="peak-category">Peak or off peak?</label>
 <select name="peak_category" id="peak-category">
@@ -14,7 +14,7 @@
 </select>
 
 <label for="fitness-class-max-size">Maximum Size Class</label>
-  <input id="fitness-class-max-size" type="number" name="fitness_class_max_size" />
+  <input id="fitness-class-max-size" type="number" min=0 name="fitness_class_max_size" />
 
 <input type="submit" value="submit">
 

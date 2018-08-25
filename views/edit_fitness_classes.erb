@@ -5,7 +5,7 @@
   <input type="text" name="fitness_class_name" id="fitness-class-name" value="<%=@fitness_class.fitness_class_name %>"/>
 
 <label for="fitness-class-time">Fitness Class Time</label>
-<input type="time" name="fitness_class_time" id="fitness-class-time" value="<= @fitness_class.fitness_class_time %>"/>
+<input type="time" required name="fitness_class_time" id="fitness-class-time" value="<= @fitness_class.fitness_class_time %>"/>
 
 <label for="peak-category">Peak Category:</label>
 <select name="peak_category" id="peak-category">
@@ -14,7 +14,7 @@
 </select>
 
 <label for="fitness-class-max-size">Class Max Size:</label>
-<input type="number" name="fitness_class_max_size" id="fitness-class-max-size" value="<%= @fitness_class.fitness_class_max_size() %>" />
+<input type="number" min=0 name="fitness_class_max_size" id="fitness-class-max-size" value="<%= @fitness_class.fitness_class_max_size() %>" />
 
 <input type="submit" value="Save Edits">
 

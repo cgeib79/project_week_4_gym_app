@@ -2,13 +2,13 @@
 <form method="post" action="/member_classes/<%=@member_class.id %>" >
 
 <label for="member-id">Member Id</label>
-<input type="number" name="member_id" id="member-id" value="<%=@member_class.member_id %>"/>
+<input type="number" min=0  name="member_id" id="member-id" value="<%=@member_class.member_id %>"/>
 
 
 
 
 <label for="fitness-class-id">Fitness Id</label>
-<input type="number" name="fitness_class_id" id="fitness-class-id" value="<%=@member_class.fitness_class_id %>"/>
+<input type="number" min=0 name="fitness_class_id" id="fitness-class-id" value="<%=@member_class.fitness_class_id %>"/>
 
 <input type="submit" value="Save Edits">
 
